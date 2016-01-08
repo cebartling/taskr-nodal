@@ -11,6 +11,7 @@ module.exports = (function() {
 
   /* generator: begin imports */
 
+  const UsersController = Nodal.require('app/controllers/users_controller.js');
 
   /* generator: end imports */
 
@@ -19,6 +20,7 @@ module.exports = (function() {
 
   /* generator: begin routes */
 
+  router.route(/^\/users\/?/, UsersController);
 
   /* generator: end routes */
 
