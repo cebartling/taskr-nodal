@@ -8,6 +8,7 @@
     "node": "5.4.0"
   },
   "dependencies": {
+    "bcrypt": "^0.8.5",
     "nodal": "latest"
   },
   "scripts": {

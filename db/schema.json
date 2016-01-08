@@ -1,5 +1,39 @@
 {
 
-  "migration_id": null
+  "migration_id": 2016010804050428,
+
+  "models": {
+
+    "AccessToken": {
+
+      "table": "access_tokens",
+
+      "columns": [
+        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "user_id", "type": "int"},
+        {"name": "access_token", "type": "string"},
+        {"name": "token_type", "type": "string"},
+        {"name": "expires_at", "type": "datetime"},
+        {"name": "ip_address", "type": "string"},
+        {"name": "created_at", "type": "datetime"}
+      ]
+
+    },
+
+    "User": {
+
+      "table": "users",
+
+      "columns": [
+        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "email", "type": "string", "properties": {"unique":true}},
+        {"name": "password", "type": "string"},
+        {"name": "username", "type": "string"},
+        {"name": "created_at", "type": "datetime"}
+      ]
+
+    }
+
+  }
 
 }
